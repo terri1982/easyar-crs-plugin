@@ -1,3 +1,5 @@
+![EasyAR](assets/logo.png)
+
 # easyar-crs (Agent Plugin, v0.1.0)
 
 MCP stdio server + skill wrapping the EasyAR CRS (Cloud Recognition Service) HTTP API. Zero dependencies, Node ≥ 18.
@@ -12,7 +14,7 @@ MCP stdio server + skill wrapping the EasyAR CRS (Cloud Recognition Service) HTT
 | EASYAR_CRS_CLIENT_URL | yes for search | `/v2/search` |
 | EASYAR_REGION | no | `cn1` (default → uac.easyar.com) or `na1` (→ uac-na1.easyar.com) |
 
-Variables are declared under `extensions["com.easyar.crs"].variables` in plugin.json, because the Agent Plugins 1.0.0 manifest schema has no top-level `variables` field (`additionalProperties: false`).
+Variables are declared under `extensions["com.easyar.crs"].variables` in plugin.json, and the logo under `extensions["com.easyar.crs"].logo` (`assets/logo.png`), because the Agent Plugins 1.0.0 manifest schema has no top-level `variables` or `logo` field (`additionalProperties: false`).
 
 ## Auth (token mode only)
 POST `{uac}/token/v2` with `{apiKey, expires, acl, timestamp, signature}`; token cached until expiry (minus 60 s) and sent as `Authorization` header plus `appId` param. Signing lives in `signTokenRequest()` in `server/index.mjs`.

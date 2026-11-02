@@ -10,6 +10,7 @@
   "keywords": ["easyar", "crs", "cloud-recognition", "ar", "image-target"],
   "extensions": {
     "com.easyar.crs": {
+      "logo": "assets/logo.png",
       "variables": [
         { "name": "EASYAR_API_KEY", "secret": true, "required": true, "description": "EasyAR API Key" },
         { "name": "EASYAR_API_SECRET", "secret": true, "required": true, "description": "EasyAR API Secret (used only to sign the /token/v2 request)" },
