@@ -2,6 +2,12 @@
 
 MCP stdio server + skill wrapping the EasyAR CRS (Cloud Recognition Service) HTTP API. Zero dependencies, Node ≥ 18.
 
+## User guide / 使用说明 / 使用ガイド
+
+- [使用说明（简体中文）](docs/USAGE.zh-CN.md)
+- [User guide (English)](docs/USAGE.en.md)
+- [使用ガイド（日本語）](docs/USAGE.ja.md)
+
 ## Variables
 | Var | Required | Use |
 |---|---|---|
