@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "easyar-crs": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["server/index.mjs"],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "EASYAR_API_KEY": "${EASYAR_API_KEY}",
+        "EASYAR_API_SECRET": "${EASYAR_API_SECRET}",
+        "EASYAR_CRS_APP_ID": "${EASYAR_CRS_APP_ID}",
+        "EASYAR_CRS_SERVER_URL": "${EASYAR_CRS_SERVER_URL}",
+        "EASYAR_CRS_CLIENT_URL": "${EASYAR_CRS_CLIENT_URL}",
+        "EASYAR_REGION": "${EASYAR_REGION}"
+      }
+    }
+  }
+}

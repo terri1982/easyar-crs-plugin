@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "easyar-crs",
+  "version": "0.1.0",
+  "description": "EasyAR CRS (Cloud Recognition Service): manage image targets and search by image via token-authenticated HTTP API.",
+  "author": { "name": "EasyAR / Terri Tu" },
+  "homepage": "https://www.easyar.com/doc/en/api/cloud/cloud-recognition/apis.html",
+  "repository": "https://github.com/terri1982/easyar-crs-plugin",
+  "license": "MIT",
+  "keywords": ["easyar", "crs", "cloud-recognition", "ar", "image-target"],
+  "extensions": {
+    "com.easyar.crs": {
+      "variables": [
+        { "name": "EASYAR_API_KEY", "secret": true, "required": true, "description": "EasyAR API Key" },
+        { "name": "EASYAR_API_SECRET", "secret": true, "required": true, "description": "EasyAR API Secret (used only to sign the /token/v2 request)" },
+        { "name": "EASYAR_CRS_APP_ID", "secret": false, "required": true, "description": "CRS AppId of the image library" },
+        { "name": "EASYAR_CRS_SERVER_URL", "secret": false, "required": true, "description": "Server-end URL (targets, grade, similar)" },
+        { "name": "EASYAR_CRS_CLIENT_URL", "secret": false, "required": true, "description": "Client-end URL (search), e.g. https://<id>.cn1.crs.easyar.com:8443" },
+        { "name": "EASYAR_REGION", "secret": false, "required": false, "description": "cn1 (default, uac.easyar.com) or na1 (uac-na1.easyar.com)" }
+      ]
+    }
+  }
+}
